@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./localCSS.css">
+    <title>Bootstrap grid tests</title>
+
+    <script>
+        function showScreenSize() {
+          screenWidth = $(window).width();
+          screenHeight = $(window).height();
+          //console.log("Resize Event happend - Screen Width now -" +  screenWidth);
+          $('#screenSize').html("" + screenWidth + "x" + screenHeight);
+        }
+    </script> 
+  </head>
+  <body onresize="showScreenSize()">
+    <pre>
+      Bootstrap has the following device sizes (based on width of the device):
+      * xs < 576
+      * sm >= 576px 
+      * md >= 768px
+      * lg >= 992px
+      * xl >= 1200px
+    </pre>
+    <span class="JumpBotton"> Bottom - <a href="#botton">Jump to bottom</a> - to see latest tests. </span>
+    
+    <hr> <!-- ***************************************************************** -->
+    <pre class="test">
+      This next example will have 3 columns (for md or bigger devices)
+    </pre>
+    <div class="topright">Screen Size: <span id="screenSize"></span> </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          One of three columns
+        </div>
+        <div class="col-md">
+          One of three columns
+        </div>
+        <div class="col-md">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+    <hr> <!-- ***************************************************************** -->
+    <pre class="test">
+      Same as previous test but using container-fluid class.
+      This uses the whole of the screen whereas container class doesn't
+    </pre>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md">
+          One of three columns
+        </div>
+        <div class="col-md">
+          One of three columns
+        </div>
+        <div class="col-md">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+    <hr> <!-- ***************************************************************** -->
+    <pre class="test">
+      This next example will always have 3 columns (regardless of screen size)
+    </pre>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            One of three columns2
+          </div>
+          <div class="col">
+            One of three columns2
+          </div>
+          <div class="col">
+            One of three columns2
+          </div>
+        </div>
+      </div>
+    
+    <hr> <!-- ***************************************************************** -->
+    <pre class="test">
+      - 3 columns for md>
+      - lg will have first column span 2 and other 2 5 each
+      - NOTE: With bootstrap grid is split into 12 cells
+    </pre>
+    <div class="container">
+      <div class="row">
+        <div class="col-md col-lg-2">
+          123456789012345678901234567890
+        </div>
+        <div class="col-md col-lg-5">
+          123456789012345678901234567890
+        </div>
+        <div class="col-md col-lg-5">
+          123456789012345678901234567890
+        </div>
+      </div>
+    </div>
+
+    <hr> <!-- ***************************************************************** -->
+    <pre class="test">
+      - Make column invisible for sm devices and below
+      - Using display classes: .d-none .d-sm-block
+    </pre>
+    <div class="container">
+      <div class="row">
+        <div class="col d-none d-md-block">
+          Column 1
+        </div>
+        <div class="col d-none d-md-block">
+            Column 2
+        </div>
+        <div class="col d-none d-md-block">
+            Column 3
+        </div>
+      </div>
+    </div>
+
+
+    <a name="botton"></a>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
